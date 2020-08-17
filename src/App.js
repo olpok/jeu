@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import './App.css';
 
-
 import CompareStrings from './CompareStrings'
 import SentenceForm from './SentenceForm'
 import SentenceList from './SentenceList';
 import RoundsNumber from './RoundsNumber';
+import Watson from './Watson';
+import StringList from './StringList';
+import ComparePhrases from './ComparePhrases'
+
 
 
 
@@ -18,6 +21,11 @@ class App extends Component {
   handleSubmit = (string) => {
     // alert('Le texte a été soumis : ' + string);
     this.setState({ sentences: [...this.state.sentences, string] })
+  }
+
+  handleStringSubmit = (string) => {
+    alert('Le texte a été soumis : ' + string);
+    // this.setState({ sentences: [...this.state.sentences, string] })
   }
 
   render() {
@@ -36,12 +44,17 @@ class App extends Component {
 
         {title}
 
+
         <SentenceForm handleSubmit={this.handleSubmit} />
         <SentenceList data={sentences} />
+
+        <ComparePhrases />
         <CompareStrings str1={new1} str2={new2} />
 
 
-        {/** <RoundsNumber n={0} /> */}
+        {/**<RoundsNumbers /> */}
+
+        <Watson />
 
       </div >
 

@@ -1,12 +1,12 @@
 import React from 'react'
 
 
-function RoundsNumber(n) {
+function RoundsNumber() {
     let rounds = prompt("entrez le nombre de tours ");
-    let cpt = 1;
+    let n = 1;
 
-    for (cpt = 1; cpt <= rounds; cpt++) {
-        let msg = ' Tour ' + cpt;
+    for (n = 1; n <= rounds; n++) {
+        let msg = ' Tour ' + n;
         alert(msg);
     }
     alert('La partie est terminée!');
